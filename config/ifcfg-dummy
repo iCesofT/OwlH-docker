@@ -1,0 +1,6 @@
+NAME=owlh
+DEVICE=owlh
+ONBOOT=yes
+TYPE=Ethernet
+NM_CONTROLLED=no
+MTU=65535

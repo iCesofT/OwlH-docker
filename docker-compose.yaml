@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+    owlh:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: owlhnode
+        ports:
+            - 50002:50002
+            - 50010-50020:50010-50020
+        volumes:
+            - owlhnode:/usr/local/owlh/src/owlhnode
+            - suricata:/etc/suricata
+            - zeek:/usr/local/zeek
+#        network_mode: host
+        networks:
+            owlh:
+
+volumes:
+    owlhnode:
+    suricata:
+    zeek:
+
+networks:
+    owlh:

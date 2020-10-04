@@ -1,0 +1,10 @@
+[Unit]
+Description=Owlh
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/owlh/src/owlhnode/owlhnode
+
+[Install]
+WantedBy=default.target
